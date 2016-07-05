@@ -6,6 +6,9 @@ require 'numbers_in_words/language_writer'
 require 'numbers_in_words/english/constants'
 require 'numbers_in_words/english/language_writer_english'
 
+require 'numbers_in_words/russian/constants'
+require 'numbers_in_words/russian/language_writer_english'
+
 require 'numbers_in_words/number_group'
 require 'numbers_in_words/number_parser'
 require 'numbers_in_words/to_number'
@@ -18,7 +21,7 @@ module NumbersInWords
     attr_writer :language
 
     def language
-      @language ||= "English"
+      @language ||= "Russian"
     end
 
     def in_words(i, language=NumbersInWords.language, only_compress=false)
